@@ -51,7 +51,7 @@ function PricePlans() {
           sx={{
             backgroundColor: "#FFFFFF",
             display: "flex",
-            width: { xs: "200px", sm: "300px" },
+            width: { xs: "150px", sm: "300px" },
             padding: 1,
             justifyContent: "space-around",
             borderRadius: "30px",
@@ -66,7 +66,7 @@ function PricePlans() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: { xs: "16px", sm: "18px" },
+              fontSize: { xs: "14px", sm: "18px" },
             }}
           >
             Monthly
@@ -83,7 +83,7 @@ function PricePlans() {
               alignItems: "center",
               justifyContent: "center",
               color: "white",
-              fontSize: { xs: "16px", sm: "18px" },
+              fontSize: { xs: "14px", sm: "18px" },
             }}
           >
             Annually
