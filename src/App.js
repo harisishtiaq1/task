@@ -1,8 +1,18 @@
 import './App.css';
 import Layout from "./Components/Layout/Layout"
+import About from './Components/about/About';
+import Addwatermark from './Components/about/Addwatermark';
+import DrawerAppBar from './Components/appbar/Appbar';
+import Home from './Components/home/Home';
 function App() {
   return (
-    <Layout/>
+    <>
+      <DrawerAppBar/>
+      <Home/>
+      <About/>
+      <Addwatermark/>
+      <Layout/>
+    </>
   );
 }
 
