@@ -51,7 +51,7 @@ function PricePlans() {
           sx={{
             backgroundColor: "#FFFFFF",
             display: "flex",
-            width: { xs: "150px", sm: "300px" },
+            width: { xs: "200px", sm: "300px" },
             padding: 1,
             justifyContent: "space-around",
             borderRadius: "30px",
@@ -76,14 +76,14 @@ function PricePlans() {
             component="h6"
             sx={{
               borderRadius: "30px",
-              width: "130px",
+              width: {xs:"100px",sm:130},
               height: "50px",
               background: "linear-gradient(180deg, #00CFF4 0%, #598DFA 100%);",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               color: "white",
-              fontSize: { xs: "14px", sm: "18px" },
+              fontSize: { xs: "12px", sm: "18px" },
             }}
           >
             Annually
