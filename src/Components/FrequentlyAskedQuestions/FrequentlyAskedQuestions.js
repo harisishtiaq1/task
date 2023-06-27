@@ -1,11 +1,18 @@
 import { Box, Container, Grid, IconButton, Typography } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Question from "./Question";
 
 function FrequentlyAskedQuestions() {
   const [isVisible, setIsVisible] = useState(false);
+
+useEffect(()=>{
+  let handler=()=>{
+    setIsVisible(false)
+  };
+  document.addEventListener("mousedown",handler)
+})
 
   const handleToggleVisibility = () => {
     setIsVisible(!isVisible);
