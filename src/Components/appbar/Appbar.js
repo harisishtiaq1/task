@@ -13,11 +13,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-<<<<<<< HEAD
 import { MenuItem } from "@mui/material";
 import logo from "../../imgs/Group.png";
-=======
->>>>>>> b7ea02caf2423b42b57ba50387426c1087fc710a
 
 const drawerWidth = 240;
 // const navItems = ["Home", "About us", "Pricing","FAQ"];
