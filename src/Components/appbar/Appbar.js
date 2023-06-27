@@ -13,11 +13,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+<<<<<<< HEAD
+=======
+import { MenuItem } from "@mui/material";
+import logo from "../../imgs/Group.png";
+>>>>>>> 0c43d7c2d2345b6a863abd09d43264f75d272b14
 
 const drawerWidth = 240;
-const navItems = ["Home", "About us", "Pricing","FAQ"];
+// const navItems = ["Home", "About us", "Pricing","FAQ"];
 
-function DrawerAppBar(props) {
+function DrawerAppBar({executeHomeScroll,executeAboutScroll,executePriceScroll,executeFaqScroll,executeContactScroll},props) {
   const { windows } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [navbar,setNavbar] = React.useState(false);
@@ -41,13 +46,26 @@ function DrawerAppBar(props) {
   const drawerApp = (
     <Box onClick={handleDrawerToggle} sx={{}}>
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        <ListItem disablePadding>
+          <ListItemButton onClick={()=> executeHomeScroll()} sx={{ textAlign: "center" }}>
+            <ListItemText>Home</ListItemText>
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton onClick={()=> executeAboutScroll()} sx={{ textAlign: "center" }}>
+            <ListItemText>About us</ListItemText>
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemText>Pricing</ListItemText>
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemText>FAQ</ListItemText>
+          </ListItemButton>
+        </ListItem>
         <Box sx={{textAlign:'center'}}>
           <Button sx={{backgroundImage:"linear-gradient(180deg, #00CFF4 0%, #598DFA 100%)",color:'white',fontSize:'12px'}}>Contact us</Button>
         </Box>
@@ -94,7 +112,7 @@ function DrawerAppBar(props) {
             <Box sx={{display:'flex',alignItems:'center'}}>
               <Box
                 component="img"
-                // src={logo}
+                src={logo}
                 sx={{
                   width: { xs: "40px", sm: "76px" },
                   height: { xs: "30px", sm: "38px" },
@@ -117,12 +135,20 @@ function DrawerAppBar(props) {
             sx={{display:'flex',alignItems:'center'}}
           >
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map((item) => (
-                <Button key={item} sx={{ color: navbar ? "white" : "#ccc",fontSize:'12px' }}>
-                  {item}
+                <Button onClick={() =>executeHomeScroll()} sx={{ color: navbar ? "white" : "#ccc",fontSize:'12px' }}>
+                   Home
                 </Button>
-              ))}
-              <Button sx={{backgroundImage:"linear-gradient(180deg, #00CFF4 0%, #598DFA 100%)",color:'white',fontSize:'12px'}}>Contact us</Button>
+                <Button onClick={() =>executeAboutScroll()} sx={{ color: navbar ? "white" : "#ccc",fontSize:'12px' }}>
+                   About us
+                </Button>
+                <Button onClick={()=> executePriceScroll()} sx={{ color: navbar ? "white" : "#ccc",fontSize:'12px' }}>
+                   Pricing
+                </Button>
+                <Button onClick={()=> executeFaqScroll()} sx={{ color: navbar ? "white" : "#ccc",fontSize:'12px' }}>
+                   FAQ
+                </Button>
+
+              <Button onClick={()=> executeContactScroll()} sx={{backgroundImage:"linear-gradient(180deg, #00CFF4 0%, #598DFA 100%)",color:'white',fontSize:'12px'}}>Contact us</Button>
             </Box>
           </Box>
           </Box>

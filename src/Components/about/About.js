@@ -3,10 +3,12 @@ import React from 'react'
 import backimg from '../../imgs/element-2.png'
 import aboutImg from "../../imgs/aboutImg.png"
 
-const About = () => {
+const About = ({aboutRef}) => {
   return (
-    <div>
+    <>
+    <Box ref={aboutRef}>
         <Toolbar/>
+        {/* <Container> */}
       <Grid container >
         <Grid item xs={12} sm={6} sx={{textAlign:{xs:'center'}}}>
           <Container>
@@ -27,7 +29,9 @@ const About = () => {
         </Grid>
 
       </Grid>
-    </div>
+      {/* </Container> */}
+    </Box>
+    </>
   )
 }
 
