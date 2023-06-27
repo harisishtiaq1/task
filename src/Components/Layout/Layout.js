@@ -1,4 +1,5 @@
 import React from "react";
+import ContactInformation from "../Footer/ContactInformation/ContactInformation";
 import {
   Container,
   Divider,
