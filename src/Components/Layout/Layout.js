@@ -1,5 +1,4 @@
 import React from "react";
-import ContactInformation from "../Footer/ContactInformation/ContactInformation";
 import {
   Container,
   Divider,
@@ -8,7 +7,6 @@ import {
   Toolbar,
   createTheme,
 } from "@mui/material";
-import RequestAQuote from "../Footer/Request a Quote/RequestAQuote";
 import AboutUs from "../Footer/AboutUs/AboutUs";
 import Company from "../Footer/Company/Company";
 import ContactUs from "../Footer/ContactUs/ContactUs";
@@ -17,6 +15,7 @@ import DownloadApp from "../DownloadApp/DownloadApp";
 import FrequentlyAskedQuestions from "../FrequentlyAskedQuestions/FrequentlyAskedQuestions";
 import PricePlans from "../PricePlans/PricePlans";
 import YouCanDo from "../WhatYouCanDo/YouCanDo";
+import Contact from "../Footer/Contatcs/Contact";
 
 function Layout({pricingRef,faqRef,contactRef}) {
   const theme = createTheme({
@@ -61,8 +60,6 @@ function Layout({pricingRef,faqRef,contactRef}) {
         </Grid>
       </Container>
     </ThemeProvider>
-    // <ThemeProvider theme={theme}>
-    // </ThemeProvider>
   );
 }
 

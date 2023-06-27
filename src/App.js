@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useRef } from "react";
+=======
+import { ThemeProvider, createTheme } from "@mui/material";
+>>>>>>> b7ea02caf2423b42b57ba50387426c1087fc710a
 import "./App.css";
 import Layout from "./Components/Layout/Layout";
 import About from "./Components/about/About";
