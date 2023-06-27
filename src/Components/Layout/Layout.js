@@ -34,14 +34,7 @@ function Layout() {
         </Grid>
       </Grid>
       <Container>
-        <Grid container spacing={3} sx={{ mt: 3 }}>
-          <Grid item xs={12} md={6}>
-            <ContactInformation contactRef={contactRef} />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <RequestAQuote />
-          </Grid>
-        </Grid>
+        <Contact/>
         <Divider variant="middle" sx={{ mt: 6, border: "1px solid #D9D9D9" }} />
         <Grid container spacing={3}>
           <Grid item xs={12} md={3}>
