@@ -133,7 +133,7 @@ function Plans() {
               height: "420px",
               borderRadius: "30px",
               padding: 1,
-              mt:2
+              mt: { xs: 2, sm: 0 },
             }}
           >
             <Stack
@@ -249,7 +249,7 @@ function Plans() {
               height: "420px",
               borderRadius: "30px",
               padding: 1,
-              mt: 2,
+              mt: { xs: 2, sm: 0 },
             }}
           >
             <Stack
