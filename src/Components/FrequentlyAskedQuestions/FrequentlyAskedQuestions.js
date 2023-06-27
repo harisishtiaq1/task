@@ -1,10 +1,10 @@
-import { Box, Container, Grid, IconButton, Typography } from "@mui/material";
+import { Box, Container, Grid, IconButton, Toolbar, Typography } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import React, { useState } from "react";
 import Question from "./Question";
 
-function FrequentlyAskedQuestions() {
+function FrequentlyAskedQuestions({faqRef}) {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleToggleVisibility = () => {
@@ -12,7 +12,8 @@ function FrequentlyAskedQuestions() {
   };
 
   return (
-    <Box sx={{ mt: 2 }}>
+    <Box sx={{ mt: 2 }} ref={faqRef}>
+      <Toolbar/>
       <Typography
         variant="h5"
         component="h5"

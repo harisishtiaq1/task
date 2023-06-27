@@ -1,10 +1,10 @@
 import React from "react";
-import { Box, IconButton, Stack, Typography } from "@mui/material";
+import { Box, IconButton, Stack, Toolbar, Typography } from "@mui/material";
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
-function ContactInformation() {
+function ContactInformation({contactRef}) {
   return (
     <Box
       sx={{
@@ -16,6 +16,7 @@ function ContactInformation() {
         overflow: "hidden",
         position: "relative",
       }}
+      ref={contactRef}
     >
       <Stack sx={{ ml: 3 }}>
         <Typography variant="h6" component="h6" sx={{ fontWeight: "600" }}>

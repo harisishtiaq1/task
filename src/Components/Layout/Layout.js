@@ -5,6 +5,7 @@ import {
   Divider,
   Grid,
   ThemeProvider,
+  Toolbar,
   createTheme,
 } from "@mui/material";
 import RequestAQuote from "../Footer/Request a Quote/RequestAQuote";
@@ -17,7 +18,7 @@ import FrequentlyAskedQuestions from "../FrequentlyAskedQuestions/FrequentlyAske
 import PricePlans from "../PricePlans/PricePlans";
 import YouCanDo from "../WhatYouCanDo/YouCanDo";
 
-function Layout() {
+function Layout({pricingRef,faqRef,contactRef}) {
   const theme = createTheme({
     typography: {
       fontFamily: "Poppins, sans-serif",
@@ -27,8 +28,8 @@ function Layout() {
   return (
     <ThemeProvider theme={theme}>
       <YouCanDo />
-      <PricePlans />
-      <FrequentlyAskedQuestions />
+      <PricePlans pricingRef={pricingRef} />
+      <FrequentlyAskedQuestions faqRef={faqRef} />
       <Grid container>
         <Grid item xs={12} sx={{ mt: 2 }}>
           <DownloadApp />
@@ -37,7 +38,7 @@ function Layout() {
       <Container>
         <Grid container spacing={3} sx={{ mt: 3 }}>
           <Grid item xs={12} md={6}>
-            <ContactInformation />
+            <ContactInformation contactRef={contactRef} />
           </Grid>
           <Grid item xs={12} md={6}>
             <RequestAQuote />

@@ -1,8 +1,8 @@
-import { Box, Grid, Paper, Typography } from "@mui/material";
-import React from "react";
+import { Box, Grid, Paper, Toolbar, Typography } from "@mui/material";
+import React, { useRef } from "react";
 import Plans from "./Plans";
 
-function PricePlans() {
+function PricePlans({pricingRef}) {
   return (
     <>
       <Box
@@ -13,7 +13,9 @@ function PricePlans() {
           alignItems: "center",
           mt: 2,
         }}
+        ref={pricingRef}
       >
+        <Toolbar/>
         <Grid Container>
           <Grid
             item

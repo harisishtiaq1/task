@@ -5,17 +5,16 @@ import playstore from "../../imgs/playstore.jpg"
 import backgroundImg from "../../imgs/background.png"
 import homeImg from "../../imgs/Screenshot 2023-06-12 at 6.31 1.png"
 
-const Home = () => {
+const Home = ({homeRef}) => {
     
   return (
-    <div>
-        {/* <Toolbar/> */}
+    <div ref={homeRef}>
       <Toolbar/>
 
       <Container>
         <Grid sx={{mt:'20px'}} container spacing={4}>
             <Grid item xs={12} sm={7}>
-                <Typography variant="h1" sx={{fontWeight:'600',textAlign:'initial',fontSize:{xs:'65px',sx:'84px'}}}>Easy way to become a Pro video App</Typography>
+                <Typography variant="h1" sx={{fontWeight:'600',textAlign:'initial',fontSize:{xs:'60px',md:'79px'}}}>Easy way to become a Pro video App</Typography>
                 <Typography variant="p" component="div" sx={{color:'#ccc',textAlign:'initial',marginTop:'36px'}}>Add watermarks to your videos online. Add logos, text, photo, and more.</Typography>
                 <Typography variant='p' component="div" sx={{color:'black',marginTop:'16px',textAlign:'initial',marginBottom:'16px'}}>Download now</Typography>
                 <Grid container spacing={2}>
@@ -50,3 +49,6 @@ const Home = () => {
 }
 
 export default Home
+
+
+
